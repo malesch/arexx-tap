@@ -1,0 +1,39 @@
+[package]
+name = "arexx-tap"
+version = "0.1.0"
+edition = "2021"
+
+description = "Reading of temperature values from a Arexx device"
+readme = "../README.md"
+authors = ["Marcus Spiegel"]
+
+documentation = "https://github.com/malesch/arexx-tap"
+homepage = "https://github.com/malesch/arexx-tap"
+repository = "https://github.com/malesch/arexx-tap"
+
+keywords = ["arexx", "sensor", "networking"]
+categories = ["network-programming", "api-bindings", "embedded"]
+
+license = "MIT OR Apache-2.0"
+exclude = ["/.github/"]
+
+[dependencies]
+anyhow = "1.0.86"
+async-trait = "0.1.80"
+chrono = "0.4.38"
+clap = { version = "4.5.8", features = ["derive"] }
+influxdb = { version = "0.7.2", features = ["derive"] }
+itertools = "0.13.0"
+json = "0.12.4"
+rand = "0.8.5"
+regex-syntax = "0.8.4"
+rumqttc = "0.24.0"
+rusb = "0.9.4"
+serde = { version = "1.0.203", features = ["derive"] }
+serde_json = "1.0.120"
+time = { version = "0.3.36", features = ["macros"] }
+tokio = { version = "1.38.0", features = ["full"] }
+toml = "0.8.14"
+tracing = "0.1.40"
+tracing-appender = "0.2.3"
+tracing-subscriber = {version = "0.3.18", features = [ "env-filter", "fmt", "json", "local-time" ]}

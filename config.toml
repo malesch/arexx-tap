@@ -1,0 +1,58 @@
+# Arexx USB device parameters
+
+vid = 0x0451
+pid = 0x3211
+
+# global scaling factor
+# temperature-scaling = 0.0078
+
+# log file
+
+[log]
+enabled = true
+prefix = "arexx-tap.log"
+level = "warn"
+
+# sinks
+
+[[sink]]
+type = "DataFile"
+enabled = true
+file = "arexx-temperatures.jsonl"
+
+[[sink]]
+type = "InfluxDB"
+enabled = true
+url = "http://localhost:8086" 
+bucket = "iobroker"
+token = "<API KEY>"
+measurement-base = "mqtt.0.temp"
+
+[[sink]]
+type = "MQTT"
+enabled = false
+host = "localhost"
+port = 1883
+topic-base = "mqtt/0/arexx"
+
+[[sensors]]
+id = 1111
+name = "Outdoors"
+# scaling factor per sensor
+# temperature-scaling = 0.0085
+
+[[sensors]]
+id = 2222
+name = "Office"
+
+[[sensors]]
+id = 3333
+name = "Kitchen"
+
+[[sensors]]
+id = 4444
+name = "Bath"
+
+[[sensors]]
+id = 5555
+name = "Living-room"

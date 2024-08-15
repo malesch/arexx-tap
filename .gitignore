@@ -1,0 +1,8 @@
+/target
+.lsp
+.DS_Store
+.idea
+*.iml
+*.jsonl
+*.log
+

@@ -1,0 +1,14 @@
+[Unit]
+Description=Start the arexx-tap service
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/<username>/arexx-tap
+ExecStart=/home/malex/arexx-tap/arexx-tap --config /home/<username>/arexx-tap/config.toml
+Restart=always
+RestartSec=10
+User=<username>
+
+[Install]
+WantedBy=multi-user.target
