@@ -161,7 +161,7 @@ impl Arexx {
                     let sensor_id = u16::from_le_bytes(sensor_id_bytes);
 
                     let value_bytes = buf[4..6].try_into()?;
-                    let value = u16::from_be_bytes(value_bytes);
+                    let value = i16::from_be_bytes(value_bytes);
 
                     let ts_bytes = buf[6..10].try_into()?;
                     let timestamp = parse_arexx_date_bytes(ts_bytes);
