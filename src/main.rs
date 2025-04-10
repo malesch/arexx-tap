@@ -31,6 +31,7 @@ pub(crate) struct CliOptions {
     #[arg(short, long)]
     config: Option<PathBuf>,
 
+    /// Timestamp to start reading data. Example: "2025-04-10 20:51:33". Default is the current time
     #[arg(long)]
     start_time: Option<String>,
 }
